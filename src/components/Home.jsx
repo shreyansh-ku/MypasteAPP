@@ -58,7 +58,7 @@ const Home = () => {
   return (
     <div>
       <div>
-      <input type="text" className="w-[62rem] bg-gray-100 border border-gray-500 rounded-lg p-3 mt-2 ml-2 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
+      <input type="text" className="w-full sm:w-3/4 lg:w-2/3 bg-gray-100 border border-gray-500 rounded-lg p-3 mt-2 ml-2 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
       placeholder='Enter Title' 
       value={title} 
       onChange={(e)=>
@@ -78,7 +78,7 @@ const Home = () => {
       </button>
       </div>
       <div className='mt-4 ml-1 '>
-        <textarea className="w-3/4 bg-gray-100 text-black border border-gray-500 rounded-lg p-3 mt-2 ml-1 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
+        <textarea className="w-full sm:w-3/4 lg:w-2/3 bg-gray-100 text-black border border-gray-500 rounded-lg p-3 mt-2 ml-1 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
         value={value} 
         placeholder='enter your text here'
         onChange={(e)=>

@@ -5,13 +5,13 @@ import { themechanger } from '../App';
 const Navbar = () => {
   const {theme,settheme}=useContext(themechanger);
   return (
-    <nav className="bg-gradient-to-r from-gray-900 to-black shadow-2xl px-6 py-3 flex justify-between items-center border-b-2">
+    <nav className="bg-gradient-to-r from-gray-900 to-black shadow-2xl px-6 py-3 flex flex-col sm:flex-row justify-between items-center border-b-2">
       {/* Logo / App Name */}
       <div className="text-3xl font-bold text-white">
         PasteKro
       </div>
       {/* Navigation Links */}
-      <div className="flex gap-6 ">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center ">
         <NavLink
           to="/"
           className={({ isActive }) =>
