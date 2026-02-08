@@ -5,6 +5,7 @@ import { addtopastes } from '../redux/pasteslice';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import Paste from './paste';
+import toast from 'react-hot-toast';
 const Home = () => {
   const [title,setTitile] = useState('');
   const [value,setvalue] =useState('');
@@ -31,6 +32,10 @@ const Home = () => {
 
 
   function createpaste(){
+    if(!title.trim() && !value.trim()){
+      toast.error("Title and content cannot be empty!");
+      return;
+    }
     // object ke form meh
     const paste ={
       title:title,
@@ -54,20 +59,27 @@ const Home = () => {
   return (
     <div>
       <div>
-      <input type="text" className="w-[62rem] bg-gray-100 border border-gray-500 rounded-lg p-3 mt-2 ml-2 focus:outline-none focus:ring-1 focus:ring-black"
+      <input type="text" className="w-[62rem] bg-gray-100 border border-gray-500 rounded-lg p-3 mt-2 ml-2 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
       placeholder='Enter Title' 
       value={title} 
       onChange={(e)=>
         setTitile(e.target.value)
       }/>
-      <button className='px-4 py-3 ml-3 bg-black text-white rounded-lg hover:bg-blue-900 transition' onClick={createpaste}>
+      <button className='px-4 py-3 ml-3 
+             bg-white text-black 
+             border border-gray-700 
+             rounded-lg 
+             hover:bg-blue-500 transition 
+             dark:bg-white dark:text-black dark:hover:bg-gray-300"
+"
+      ' onClick={createpaste}>
         {
         pasteid ? "Update Paste" : "Create My Paste"
         }
       </button>
       </div>
       <div className='mt-4 ml-1 '>
-        <textarea className="w-3/4 bg-gray-100 text-black border border-gray-800 rounded-lg p-3 mt-2 ml-1 focus:outline-none focus:ring-1 focus:ring-black"
+        <textarea className="w-3/4 bg-gray-100 text-black border border-gray-500 rounded-lg p-3 mt-2 ml-1 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
         value={value} 
         placeholder='enter your text here'
         onChange={(e)=>

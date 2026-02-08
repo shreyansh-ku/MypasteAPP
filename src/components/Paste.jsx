@@ -37,7 +37,7 @@ const Paste = () => {
             <div key={paste.id} className="p-6 bg-slate-800 rounded-xl text-white shadow-lg hover:shadow-blue-glow transform hover:scale-105 transition duration-300 ease-in-out"
 >
               <div className="text-3xl font-semibold">{paste.title}</div> 
-              <div className="mt-2 mb-4 text-sm ">{paste.content}</div>
+              <div className="mt-2 mb-4 text-sm line-clamp-2">{paste.content}</div>
               {/* BUTTONS-----------------> */}
               <div className="flex flex-row gap-2 place-content-evenly mt-2 ">
                 <button className="bg-blue-500 text-white px-2 py-1 rounded transform hover:scale-105 transition duration-300 ease-in-out"
@@ -71,7 +71,7 @@ const Paste = () => {
                 }}>Share</button>
               </div>
               {/* DATE */}
-              <div className="text-xs text-blue-300 mt-2 text-center"> {new Date(paste.createdAt).toLocaleString()}
+              <div className="text-xs text-blue-300 mt-7 text-center"> {new Date(paste.createdAt).toLocaleString()}
 </div>
             </div>
           ))

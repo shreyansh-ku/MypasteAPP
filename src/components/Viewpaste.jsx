@@ -14,7 +14,7 @@ const Viewpaste = () => {
   return (
     <div>
       <div>
-      <input type="text" className="w-[62rem] bg-gray-100 border border-gray-500 rounded-lg p-3 mt-2 ml-2 focus:outline-none focus:ring-1 focus:ring-black"
+      <input type="text" className="w-[62rem] bg-gray-100 border border-gray-500 rounded-lg p-3 mt-2 ml-2 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
       placeholder='Enter Title' 
       value={paste.title} disabled 
       onChange={(e)=>
@@ -27,7 +27,7 @@ const Viewpaste = () => {
       </button> */}
       </div>
       <div className='mt-4 ml-1 '>
-        <textarea className="w-3/4 bg-gray-100 text-black border border-gray-800 rounded-lg p-3 mt-2 ml-1 focus:outline-none focus:ring-1 focus:ring-black"
+        <textarea className="w-3/4 bg-gray-100 text-black border border-gray-800 rounded-lg p-3 mt-2 ml-1 focus:outline-none focus:ring-1 focus:ring-black dark:bg-white dark:text-black"
         value={paste.content} 
         placeholder='enter your text here' disabled
         onChange={(e)=>
