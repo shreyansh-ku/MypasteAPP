@@ -6,7 +6,7 @@ import { updatetopaste } from '../redux/pasteslice';
 import { addtopastes } from '../redux/pasteslice';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import Paste from './paste';
+import Paste from '../components/Paste';
 const Viewpaste = () => {
   const {id}=useParams();
   const allpaste=useSelector((state)=> state.paste.pastes);
